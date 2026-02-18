@@ -734,8 +734,7 @@ a {
 /* Responsive */
 @media (max-width: 600px) {
     .hero {
-        height: 100vh;
-        height: 100svh; 
+        min-height: 100svh; 
         padding-top: 50px;
     }
 
