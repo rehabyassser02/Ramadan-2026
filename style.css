@@ -623,9 +623,9 @@ a {
 .moon-decor {
     position: absolute;
     top: 20px;
-    /* right: 15%; */
+    right: 8%;
     width: 60px;
-    /* height: 60px; */
+    height: 60px;
     background: url('https://cdn-icons-png.flaticon.com/512/1823/1823324.png') no-repeat center/contain;
     animation: float 4s ease-in-out infinite;
     opacity: 0.8;
@@ -734,15 +734,19 @@ a {
 /* Responsive */
 @media (max-width: 600px) {
     .hero {
-        /* Use svh if supported for better mobile viewport handling */
         height: 100vh;
         height: 100svh; 
-        padding-top: 50px; /* Ensure content clears the top decorations a bit if centered high */
+        padding-top: 50px;
     }
 
     .decorations {
-        height: 100px; /* Smaller decorations area on mobile */
+        height: 100px;
     }
+
+    /* .star-decor,
+    .moon-decor {
+        display: none !important;
+    } */
 
     .bunting .rope {
         top: 14px;
@@ -774,14 +778,21 @@ a {
         width: 20px;
         height: 40px;
     }
-    
-    .s1 { height: 35px; }
-    .s2 { height: 40px; }
 
     .moon-decor {
-        width: 40px;
-        height: 40px;
-        right: 10%;
+        right: 50%;
+        transform: translateX(50%);
+        top: 10px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .s1 {
+        left: 5%;
+    }
+
+    .s2 {
+        left: 90%;
     }
 
     /* Hero Content Adjustments */
