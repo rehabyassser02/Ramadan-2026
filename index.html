@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رمضان كريم يا حبيبتي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Stars Background -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <!-- Hanging Decorations -->
+    <div class="decorations">
+        <div class="lantern l1"></div>
+        <div class="lantern l2"></div>
+        <div class="lantern l3"></div>
+        <div class="star-decor s1"></div>
+        <div class="star-decor s2"></div>
+        <div class="moon-decor"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-btn" title="تغيير الوضع (نهاري/ليلي)">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="hero" id="welcome">
+
+        <div class="lantern-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/3218/3218882.png" alt="Lantern" class="floating-lantern">
+        </div>
+        <h1 class="main-title">رمضان مبارك</h1>
+        <h2 class="subtitle">يا رفيقة روحي... ومصدر إزعاجي المفضل (أتمنى)</h2>
+        <div class="romantic-message">
+            <p>"مع ظهور الهلال، قلبي بينور بوجودك. ربنا يجعل الشهر ده كله خير وبركة... ويجعل كل الأكل ده يبان عليكي شوية؟ (بهزر، كلي براحتك يا قمر، السمبوسة بتستناكي)."</p>
+        </div>
+        <a href="#journey" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </header>
+    <div class="separator"></div>
+
+    <!-- Our Journey Section -->
+    <section id="journey" class="section">
+        <h2>يومنا في رمضان</h2>
+        <p class="section-desc">ماسكين في إيد بعض... وبنحاول ما نجوعش.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="icon"><i class="fas fa-bed"></i></div>
+                <p>ننام طول النهار</p>
+            </div>
+            <div class="timeline-item">
+                <div class="icon"><i class="fas fa-utensils"></i></div>
+                <p>نحلم بالأكل</p>
+            </div>
+            <div class="timeline-item">
+                <div class="icon"><i class="fas fa-heart"></i></div>
+                <p>بحبك في كل وقت</p>
+            </div>
+        </div>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Good Deeds Jar -->
+    <section id="deeds" class="section">
+        <h2>برطمان الحسنات</h2>
+        <p class="section-desc">يلا نجمع حسنات (ونقط لبعض).</p>
+        <div class="jar-container">
+            <div id="deed-result" class="deed-card hidden">
+                <p id="deed-text"></p>
+                <button id="close-deed">ماشي، اتفقنا!</button>
+            </div>
+        </div>
+        <button id="pick-deed-btn" class="btn-primary">اختاري عمل صالح لينا</button>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Daily Love Note & Du'a -->
+    <section id="love-dua" class="section">
+        <h2>دعوة ورسالة</h2>
+        <div class="flip-card">
+            <div class="flip-card-inner" id="daily-card">
+                <div class="flip-card-front">
+                    <h3>شوفي دعوتك النهاردة</h3>
+                    <p>اضغطي عشان تشوفي الدعوة (وحجتي إني مكسل النهاردة).</p>
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <div class="flip-card-back">
+                    <h3 id="dua-title">دعاء اليوم</h3>
+                    <p id="dua-text">جاري التحميل...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Iftar Countdown -->
+    <section id="countdown-section" class="section">
+        <h2>عداد السمبوسة 🥟</h2>
+        <div id="countdown" class="countdown-timer">
+            <div><span id="hours">00</span> ساعة</div>
+            <div><span id="minutes">00</span> دقيقة</div>
+            <div><span id="seconds">00</span> ثانية</div>
+        </div>
+        <p class="location-note">*أنا عارف إنك جعانة، خليكِ قوية.</p>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Ramadan Vibe Check (Funny Quiz) -->
+    <section id="vibe-check" class="section">
+        <h2>اختبار الحالة الرمضانية 🧐</h2>
+        <p class="section-desc">تعالي نشوف دماغك فين دلوقتي.</p>
+        
+        <div class="quiz-container">
+            <div class="quiz-card">
+                <h3>فاضل 10 دقايق على المغرب... بتعملي إيه؟</h3>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkVibe(this, 'clock')">ببص للساعة ومستنية 🕰️</button>
+                    <button class="quiz-btn" onclick="checkVibe(this, 'table')">بجهز السفرة (ست بيت شاطرة) 🍽️</button>
+                </div>
+                <p class="quiz-response"></p>
+            </div>
+
+            <div class="quiz-card">
+                <h3>مين هينام مكانُه بعد الإفطار؟</h3>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkVibe(this, 'me')">أنا (خطيبك الغلبان) 😴</button>
+                    <button class="quiz-btn" onclick="checkVibe(this, 'you')">أنتي (يا ملكة الدراما) 👑</button>
+                </div>
+                <p class="quiz-response"></p>
+            </div>
+
+            <div class="quiz-card">
+                <h3>سمبوسة ولا قطايف؟</h3>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkVibe(this, 'samosa')">فريق السمبوسة 🥟</button>
+                    <button class="quiz-btn" onclick="checkVibe(this, 'pakora')">فريق القطايف 🥞</button>
+                </div>
+                <p class="quiz-response"></p>
+            </div>
+        </div>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Open When... Section -->
+    <section id="open-when" class="section">
+        <h2>وقت الطوارئ</h2>
+        <div class="envelopes">
+            <div class="envelope" onclick="openEnvelope('hungry')">
+                <i class="fas fa-hamburger"></i>
+                <span>جعانة جداً!</span>
+            </div>
+            <div class="envelope" onclick="openEnvelope('miss')">
+                <i class="fas fa-sad-tear"></i>
+                <span>وحشتني</span>
+            </div>
+            <div class="envelope" onclick="openEnvelope('strength')">
+                <i class="fas fa-dumbbell"></i>
+                <span>مش قادرة خلاص</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Hidden Surprise -->
+    <footer class="footer">
+        <div class="surprise-container">
+            <button id="surprise-btn" class="heart-btn" title="ممنوع الضغط... إلا لو بتحبيني">
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+        <p class="footer-text">معمولة بكل <i class="fas fa-heart"></i> (وقلة نوم) عشانك</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="envelope-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
