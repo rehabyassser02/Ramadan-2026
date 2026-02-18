@@ -1,3 +1,7 @@
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 // Data Arrays - Arabic Version
 const goodDeeds = [
     "نقرأ 5 صفحات قرآن سوا (وأنا هسمعلك).",
